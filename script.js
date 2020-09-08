@@ -42,9 +42,9 @@ function displayResults(responseJson) {
         $('#results-list').append(
             `<li>
                 <h3>${responseJson.data[i].fullName}</h3>
-                <p>Address: ${responseJson.data[i].addresses[0].city}, ${responseJson.data[i].addresses[0].line1}, ${responseJson.data[i].addresses[0].postalCode}, ${responseJson.data[i].addresses[0].stateCode}</p>
+                <p>Address: ${responseJson.data[i].addresses[0].line1}, ${responseJson.data[i].addresses[0].city}, ${responseJson.data[i].addresses[0].stateCode} ${responseJson.data[i].addresses[0].postalCode}</p>
                 <p>Description: ${responseJson.data[i].description}</p>
-                <a href="${responseJson.data[i].url}">Click here for more info!</a>
+                <a href="${responseJson.data[i].url}" target="_blank">Click here for more info!</a>
                 <img id="park-image" src="${responseJson.data[i].images[0].url}" alt="${responseJson.data[i].images[0].altText}" style="max-width:100%; max:height:100%"> 
             </li>
             `
